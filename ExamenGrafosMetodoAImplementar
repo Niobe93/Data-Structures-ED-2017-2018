@@ -1,0 +1,24 @@
+/**
+	 * 
+	 * 
+	 **/
+	public int getNumberOfUnreachablesNodes(T nodo){
+		
+		if((getNode(nodo)==-1)|| (nodo==null) || (numNodes==0))
+			return -1;
+		
+		floyd(); //llamamos a floyd por si no están inicializadas las matrices
+		
+		int nodosNoAccesibles=0;
+		
+		for (int i =0; i<numNodes; i++) {
+			if(matrizA[getNode(nodo)][i]==Double.POSITIVE_INFINITY) { //si hay un infinito significa que no es accesible
+					nodosNoAccesibles++;}}
+		
+		return nodosNoAccesibles;
+		
+		
+		
+		
+		
+	}
